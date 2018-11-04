@@ -1,0 +1,6 @@
+# A treetop grammar for JSON
+grammar JSONGrammar
+  rule json
+    array / object
+  end
+end

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Diluvia</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag '//cdn.jsdelivr.net/npm/phaser@3.12.0/dist/phaser.min.js' %>
+    <%= yield :inline_styles %>
+    <%= yield :inline_scripts %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
