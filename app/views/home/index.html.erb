@@ -36,8 +36,8 @@
   const game = new Phaser.Game(config);
 
   function preload() {
-    this.load.image("tiles", "<%= url_for(@tileset.tilemap) %>");
-    this.load.tilemapTiledJSON("town", "<%= url_for(@tileset.tileset_data) %>");
+    this.load.image("tiles", "<%= url_for(@tilemap.tileset) %>");
+    this.load.tilemapTiledJSON("town", "<%= url_for(@tilemap.tilemap_data) %>");
   }
 
   function create() {

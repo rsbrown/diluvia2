@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
 
   def index
-    @tileset = Tileset.last
-    redirect_to('/upload', flash: { alert: "No tilesets. Please upload one." }) if @tileset.nil?
+    @tilemap = Tilemap.last
+    redirect_to('/upload', flash: { alert: "No tilemaps. Please upload one." }) if @tilemap.nil?
   end
 
 end

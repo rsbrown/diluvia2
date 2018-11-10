@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'home#index'
-  resources :tilesets
+  resources :tilemaps
 
-get '/upload', to: 'tilesets#new'
+get '/upload', to: 'tilemaps#new'
 end

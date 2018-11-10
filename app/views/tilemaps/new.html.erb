@@ -4,10 +4,10 @@
   </div>
 <% end %>
 
-<% if @tileset.errors.any? %>
+<% if @tilemap.errors.any? %>
   <div id="error_explanation">
     <ul>
-    <% @tileset.errors.full_messages.each do |msg| %>
+    <% @tilemap.errors.full_messages.each do |msg| %>
       <li>* <%= msg %></li>
     <% end %>
     </ul>
@@ -15,18 +15,18 @@
 <% end %>
 
 <div id="uploadform">
-<%= form_for :tileset, url: {action: "create"}, html: { multipart: true } do |form| %>
+<%= form_for :tilemap, url: {action: "create"}, html: { multipart: true } do |form| %>
   <div>
     <%= form.label :name, 'Name: ' %>
     <%= form.text_field :name %>
   </div>
   <div>
-    <%= form.label :tileset_data, 'Tileset: ' %>
-    <%= form.file_field :tileset_data %>
+    <%= form.label :tilemap_data, 'Tilemap: ' %>
+    <%= form.file_field :tilemap_data %>
   </div>
   <div>
-    <%= form.label :tilemap, 'Tilemap: '  %>
-    <%= form.file_field :tilemap %>
+    <%= form.label :tileset, 'Tileset: '  %>
+    <%= form.file_field :tileset %>
   </div>
   <div>
     <%= form.submit("Upload") %>
