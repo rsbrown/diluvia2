@@ -1,3 +1,9 @@
+<% if flash[:alert] %>
+  <div id="alert">
+    <%=flash[:alert]%>
+  </div>
+<% end %>
+
 <% if @tileset.errors.any? %>
   <div id="error_explanation">
     <ul>
@@ -31,10 +37,20 @@
 
 <% content_for :inline_styles do %>
 <style>
-    #uploadform form {
-      background: #DDD;
+    body {
+      font-family: helvetica;
+    }
+    #alert, #uploadform form {
       width: 400px;
       margin: 0 auto;
+    }
+    #alert {
+      background: #FCC;
+      text-align: center;
+      padding: 5px 0;
+    }
+    #uploadform form {
+      background: #DDD;
       padding: 1px 0;
     }
     #uploadform form div {

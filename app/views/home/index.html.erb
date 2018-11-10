@@ -36,10 +36,8 @@
   const game = new Phaser.Game(config);
 
   function preload() {
-    // this.load.image("tiles", "/tuxmon-sample-32px-extruded.png");
-    // this.load.tilemapTiledJSON("town", "/tuxemon-town.json");
-    this.load.image("tiles", "/tmw_desert_spacing.png");
-    this.load.tilemapTiledJSON("town", "/desert.json");
+    this.load.image("tiles", "<%= url_for(@tileset.tilemap) %>");
+    this.load.tilemapTiledJSON("town", "<%= url_for(@tileset.tileset_data) %>");
   }
 
   function create() {
@@ -47,7 +45,7 @@
     // Phaser's cache (i.e. the name you used in preload)
     var map = this.make.tilemap({ key: 'town' });
     // const tileset = map.addTilesetImage("tuxmon-sample-32px-extruded", "tiles");
-    const tileset = map.addTilesetImage("Desert", "tiles");
+    const tileset = map.addTilesetImage("Tileset", "tiles");
 
     // Parameters: layer name (or index) from Tiled, tileset, x, y
     const belowLayer = map.createStaticLayer("Below", tileset, 0, 0);
