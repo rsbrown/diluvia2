@@ -1,1 +1,12 @@
+<% content_for :inline_scripts do %>
+<script>
+  var game = window.game;
+  game.loadZone({
+    tileset: "<%= url_for(@tilemap.tileset) %>",
+    tilemapData: "<%= url_for(@tilemap.tilemap_data) %>"
+  }); 
+  game.launch();
+</script>
+<% end %>
+
 <div id="game-container"></div>

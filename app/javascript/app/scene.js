@@ -2,9 +2,16 @@ import 'phaser';
 import Player from './player';
 
 export default class Scene extends Phaser.Scene {
+  constructor(tiles, json) {
+    super();
+    
+    this.tiles = tiles;
+    this.json = json;
+  }
+
   preload() {
-    this.load.image("tiles", "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eb0d4193e206a3b29519e17ea757e16c25212a4d/tuxmon-sample-32px-extruded.png");
-    this.load.tilemapTiledJSON("town", "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5eac586b239f34cc8d6859a01d25d81c5ebb5064/tuxemon-town.json");
+    this.load.image("tiles", this.tiles);
+    this.load.tilemapTiledJSON("town", this.json);
     this.load.atlas("player", "/player1.png", "/player1.json");
   }
 
