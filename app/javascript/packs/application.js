@@ -6,3 +6,9 @@
 //
 // To reference this file, add <%% javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
+
+// Load any assets to compile here
+import '../src/application.css'
+
+// Launch our app
+import '../app/launch'
