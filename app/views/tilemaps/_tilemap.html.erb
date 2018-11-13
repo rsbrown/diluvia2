@@ -1,0 +1,12 @@
+<tr>
+  <td><%= tilemap.id %></td>
+  <td><%= link_to tilemap.name, edit_tilemap_url(tilemap) %></td>
+  <td>
+    <i class="file icon"></i> 
+    <%= tilemap.tilemap_data.filename %>
+  </td>
+  <td>
+    <i class="file image icon"></i> 
+    <%= tilemap.tileset.filename %>
+  </td>
+</tr>

@@ -1,0 +1,16 @@
+<div class="twelve wide column">
+  <table class="ui celled striped table">
+    <thead>
+      <tr><th colspan="4">
+        <div class="ui clearing">
+          <%= link_to "Upload Tilemap", new_tilemap_url, class: "ui right floated positive mini button" %>
+          <h3 class="ui left floated header">
+            Tilemaps
+          </h3>
+        </div>
+      </tr></thead>
+    <tbody>
+      <%= render partial: "tilemap", collection: @tilemaps %>
+    </tbody>
+  </table>
+</div>

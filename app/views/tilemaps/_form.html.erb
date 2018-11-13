@@ -1,0 +1,16 @@
+<div class="field">
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name %>
+</div>
+<div class="field">
+  <% extraLabel = form.object.persisted? ? (": " + form.object.tilemap_data.filename.to_s) : "" %>
+  <%= form.label :tilemap_data, "<i class='file icon'></i> Tilemap#{extraLabel}".html_safe %>
+  <%= form.file_field :tilemap_data %>
+  <small><em>Accepts .json format</em></small>
+</div>
+<div class="field">
+  <% extraLabel = form.object.persisted? ? (": " + form.object.tileset.filename.to_s) : "" %>
+  <%= form.label :tileset, "<i class='file image icon'></i> Tileset#{extraLabel}".html_safe  %>
+  <%= form.file_field :tileset %>
+  <small><em>Accepts images</em></small>
+</div>
